@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: consolas;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: radial-gradient(#8585af,#1a2438);
+}
+
+#fundo{
+    position: relative;
+    min-width: 300px;
+    min-height: 400px;
+    background-color: #0e0d66;
+    padding: 40px 30px 30px;
+    border-radius: 20px;
+    box-shadow: 25px 25px 75px rgba(0,0,0,0.25),
+    10px 10px 70px rgba(0,0,0,0.25),
+    inset -5px -5px 15px rgba(0,0,0,0.5),
+    inset 5px 5px 15px rgba(0,0,0,0.5);
+}
+ 
+#container{
+    position: relative;
+    display: grid;
+    position: relative;
+    grid-column: span 4;
+    grid-template-columns: auto auto auto auto;
+    gap: 6px;
+    padding-top: 10px;
+}
+
+#resultado{
+    background-color: #a7af7c;
+    width: 95%;
+    height: 80px;
+    margin: 5px;
+    font-size: 25px;
+    color: black;
+    text-align: right;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 0 0 2px rgba(0,0,0,0.75);
+    font-size: 2em;
+}
+
+#container div{
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(180deg, #100142, #0e0d66);
+    box-shadow: inset -8px 0 8px rgba(0,0,0,0.15),
+    inset 0 -8px 8px rgba(0,0,0,0.15),
+    0 0 0 2px rgba(0,0,0,0.75),
+    10px 20px 25px rgba(0,0,0,0.4);
+    color: #ffff;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+    font-weight: 400;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1; 
+}
+
+#container div:active{
+    filter: brightness(1.5);
+}
+
+#container div::before{
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    bottom: 14px;
+    right: 12px;
+    background: linear-gradient(90deg, #100142, #0e0d66);
+    border-radius: 10px;
+    z-index: -1; 
+}   
+
+#container .clear{
+    background: linear-gradient(180deg, #b20404, #e20707);
+}
+
+#container .clear::before{
+    background: linear-gradient(90deg, #b20404, #e20707);
+}
+
+#container .zero{
+    position: absolute;
+    grid-row: 5;
+    grid-column: 1;
+    width: 130px;
+    bottom: 5px;
+}
+
+#container .igual{
+    grid-row: 4;
+    grid-column: 4;
+    height: 130px;
+    background: linear-gradient(180deg, #578ef5, #3d388b);
+}
+
+#container .igual::before{
+    background: linear-gradient(90deg, #578ef5, #3d388b);
+}
+
+#container .ponto{
+    position: absolute;
+    grid-row: 5;
+    grid-column: 3;
+    bottom: 5px;
+    right: 64px;
+}

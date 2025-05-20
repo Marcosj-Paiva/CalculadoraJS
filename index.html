@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="fundo">
+        <p id="resultado"></p>
+        <div id="container">
+            <div class="btns clear" onclick="clean()">C</div>
+            <div class="btns" onclick="del()">⬅</div>
+            <div class="btns" onclick="insert('/')">/</div>
+            <div class="btns" onclick="insert('*')">x</div>
+            <div class="btns" onclick="insert('7')">7</div>
+            <div class="btns" onclick="insert('8')">8</div>
+            <div class="btns" onclick="insert('9')">9</div>
+            <div class="btns" onclick="insert('-')">-</div>
+            <div class="btns" onclick="insert('4')">4</div>
+            <div class="btns" onclick="insert('5')">5</div>
+            <div class="btns" onclick="insert('6')">6</div>
+            <div class="btns" onclick="insert('+')">+</div>
+            <div class="btns" onclick="insert('1')">1</div>
+            <div class="btns" onclick="insert('2')">2</div>
+            <div class="btns" onclick="insert('3')">3</div>
+            <div class="btns igual" onclick="calcular3()">=</div>
+            <div class="btns zero" onclick="insert('0')">0</div>
+            <div class="btns ponto" onclick="insert('.')">.</div>
+        </div>
+    </div>
+</body>
+</html>
